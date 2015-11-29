@@ -40,7 +40,11 @@ class Upload extends Worker {
         .then((imageDatas) => {
           var collectionName = inputVal.imageId || uuid.v4();
           var collectionCursor = this.db.collection(collectionName);
-          collectionCursor.insert(imageDatas, (err, results) => {
+          var batch = collectionCursor.initializeUnorderedBulkOp();
+          for(var i = 0; i < imageDatas.length; i++){
+            batch.insert(imageDatas[i]);
+          }
+          batch.execute((err, results) => {
             if(err){
               req.status(err).next();
               return;
