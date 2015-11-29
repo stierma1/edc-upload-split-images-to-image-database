@@ -52,6 +52,9 @@ class Upload extends Worker {
             }
             req.next();
           });
+        })
+        .catch((err) => {
+          req.status(err).next();
         });
     }).catch((err) => {
       req.status(err).next();

@@ -1,6 +1,6 @@
 {
   "name": "edc-upload-split-images-to-image-database",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
