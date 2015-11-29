@@ -40,7 +40,7 @@ class Upload extends Worker {
         .then((imageDatas) => {
           var collectionName = inputVal.imageId || uuid.v4();
           var collectionCursor = this.db.collection(collectionName);
-          collectionCursor.insertMany(imageDatas, (err, results) => {
+          collectionCursor.insert(imageDatas, (err, results) => {
             if(err){
               req.status(err).next();
               return;
