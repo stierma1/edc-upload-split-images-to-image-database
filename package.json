@@ -1,0 +1,24 @@
+{
+  "name": "edc-upload-split-images-to-image-database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stierma1/edc-upload-split-images-to-image-database.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stierma1/edc-upload-split-images-to-image-database/issues"
+  },
+  "homepage": "https://github.com/stierma1/edc-upload-split-images-to-image-database#readme",
+  "dependencies": {
+    "basic-distributed-computation": "^1.0.5",
+    "mongodb": "^2.0.49",
+    "uuid": "^2.0.1"
+  }
+}
