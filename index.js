@@ -33,7 +33,7 @@ class Upload extends Worker {
       });
       Promise.all(splitImagesProms)
         .then((sessionDatas) => {
-          return sessionData.map((sessionData) => {
+          return sessionDatas.map((sessionData) => {
             return sessionData.data;
           });
         })
